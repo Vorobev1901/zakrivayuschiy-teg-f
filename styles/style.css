@@ -15,9 +15,7 @@
 
 .page {
   color: var(--accent-color);
-  color: var(--accent-color);
-  font-family: var(--main-font, serif);
-  font-family: var(--main-font, serif);
+  font-family: var(--main-font);
   font-weight: var(--text-font-weight);
   font-size: 14px;
   line-height: normal;
@@ -162,7 +160,7 @@
   top: 25px;
   right: clamp(11px, 0.379rem + 1.315vw, 25px);
   opacity: 0.5;
-  font-family: var(--accent-font, serif);
+  font-family: var(--accent-font);
   text-transform: uppercase;
   text-shadow: -1px 0 var(--label-shadow), 0 1px var(--label-shadow), 1px 0 var(--label-shadow), 0 -1px var(--label-shadow);
   mix-blend-mode: hard-light;
@@ -304,7 +302,7 @@
   background-blend-mode: difference;
   cursor: pointer;
   appearance: none;
-  block-size: 51px;
+  min-block-size: 51px;
 }
 
 .save-button:hover .save-icon {
@@ -322,94 +320,6 @@
   font-style: normal;
   line-height: 90%;
   top: 4px;
-}
-
-/* like-icon */
-
-.like-icon {
-  display: inline-block;
-  inline-size: 36px;
-  inline-size: 39px;
-}
-
-.like-icon:hover .core {
-  fill: var(--accent-color);
-  transition-delay: 0s, 0.03s;
-  transition-duration: 0.3s;
-  transition-property: fill;
-  transition-timing-function: ease;
-}
-
-.like-icon:hover .main-body {
-  fill: var(--accent-color);
-  transition-delay: 0.05s, 0s;
-  transition-duration: 0.3s;
-  transition-property: fill;
-  transition-timing-function: ease;
-}
-
-.card__icon-button:active .main-body {
-  fill: #ff0000;
-  transition-delay: 0.05s, 0s;
-  transition-duration: 0.3s;
-  transition-property: fill;
-  transition-timing-function: ease;
-}
-
-.card__icon-button:active .core {
-  fill: #ff0000;
-  transition-delay: 0s, 0.03s;
-  transition-duration: 0.3s;
-  transition-property: fill;
-  transition-timing-function: ease;
-}
-
-.like-icon.is-liked .main-body {
-  fill: #ff0000;
-  transition-delay: 0.05s, 0s;
-  transition-duration: 0.3s;
-  transition-property: fill;
-  transition-timing-function: ease;
-}
-
-.like-icon.is-liked .core {
-  fill: #ff0000;
-  transition-delay: 0s, 0.03s;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-}
-
-.like-icon.is-liked .contour {
-  fill: #ff0000;
-  transition-delay: 0.06s;
-  transition-duration: 0.3s;
-  transition-property: fill;
-  transition-timing-function: ease;
-}
-
-.like-icon.is-liked .heart {
-  animation-name: bigger;
-  animation-delay: 0.1s;
-  animation-timing-function: ease-in;
-  animation-duration: 0.3s;
-}
-
-.like-icon.is-liked .sparks {
-  animation-name: blast;
-  animation-delay: 0.3s;
-  animation-timing-function: ease-in;
-  animation-duration: 0.3s;
-}
-
-.like-icon:not(.is-liked) .contour {
-  fill: var(--accent-color);
-  transition-duration: 0.1s;
-  transition-property: fill;
-  transition-timing-function: ease;
-}
-
-.sparks {
-  opacity: 0;
 }
 
 /* dialog */
@@ -445,6 +355,7 @@ dialog::backdrop {
 
 .dialog .save-button {
   width: 100%;
+  text-transform: uppercase;
 }
 
 .dialog[open] svg {
@@ -454,42 +365,34 @@ dialog::backdrop {
 
 /* filters */
 
-.card__image:hover.filter-blur {
+.filter-blur {
   filter: blur(5px);
-  transition: filter 0.5s ease-in-out;
 }
 
-.card__image:hover.filter-grayscale {
+.filter-grayscale {
   filter: grayscale(0.6);
-  transition: filter 0.5s ease-in-out;
 }
 
-.card__image:hover.filter-saturate {
+.filter-saturate {
   filter: saturate(150%);
-  transition: filter 0.5s ease-in-out;
 }
 
-.card__image:hover.filter-hue-rotate {
+.filter-hue-rotate {
   filter: hue-rotate(-90deg);
-  transition: filter 0.5s ease-in-out;
 }
 
-.card__image:hover.filter-sepia {
+.filter-sepia {
   filter: sepia(80%);
-  transition: filter 0.5s ease-in-out;
 }
 
-.card__image:hover.filter-invert {
+.filter-invert {
   filter: invert(0.7);
-  transition: filter 0.5s ease-in-out;
 }
 
-.card__image:hover.filter-opacity {
+.filter-opacity {
   filter: opacity(0.8);
-  transition: filter 0.5s ease-in-out;
 }
 
-.card__image:hover.filter-multipte {
+.filter-multipte {
   filter: invert(1) brightness(140%) saturate(30%) hue-rotate(90deg);
-  transition: filter 0.5s ease-in-out;
 }

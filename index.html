@@ -10,10 +10,10 @@
     <link rel="apple-touch-icon" href="./images/mobile-icon.png">
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="./styles/variables.css">
-    <link rel="stylesheet" href="./styles/globals.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/globals.css">  
     <link rel="stylesheet" href="./styles/animations.css">
     <link rel="stylesheet" href="./styles/themes.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
@@ -334,7 +334,7 @@
         <span class="button__text">Сохранить на память</span>
       </button>
       <dialog class="dialog" id="dialog-id">
-        <form>
+        <form method="dialog">
         <div class="dialog__content">
           <svg class="save-icon" 
             width="39px"
@@ -348,7 +348,7 @@
         </div>
         <button 
           class="save-button"
-          type="button" 
+          type="submit" 
           onclick="window['dialog-id'].close()">
           <span class="button__text">Ок</span>
         </button> 

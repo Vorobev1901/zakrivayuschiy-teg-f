@@ -13,7 +13,7 @@
   --bg-image: repeating-linear-gradient(#000, #0003 2px, transparent 2px, transparent 4px),
     repeating-linear-gradient(to right, #000, #000 2px, transparent 2px, transparent 4px), linear-gradient(#007f0c, #004306);
   --label-shadow: #000;
-  --hover-accent-color: #fff;
+  --hover-accent-color: #000;
   /* like-button */
   --like-color: #00cc14;
   --contour-color: #00cc14;
@@ -23,6 +23,8 @@
 }
 
 :root.theme-light {
+  --text-font-weight: 400;
+  --title-font-weight: 700;
   --bg-color: #fff;
   --accent-color: #000;
   --bg-image: repeating-linear-gradient(#d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
@@ -46,7 +48,7 @@
     --bg-image: repeating-linear-gradient(#000, #0003 2px, transparent 2px, transparent 4px),
       repeating-linear-gradient(to right, #000, #000 2px, transparent 2px, transparent 4px), linear-gradient(#007f0c, #004306);
     --label-shadow: #000;
-    --hover-accent-color: #fff;
+    --hover-accent-color: #000;
     /* like-button */
     --like-color: #00cc14;
     --contour-color: #00cc14;
@@ -58,6 +60,8 @@
 
 @media (prefers-color-scheme: light) {
   :root {
+    --text-font-weight: 400;
+    --title-font-weight: 700;
     --bg-color: #fff;
     --accent-color: #000;
     --bg-image: repeating-linear-gradient(#d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
