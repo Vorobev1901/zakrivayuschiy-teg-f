@@ -64,6 +64,7 @@
   font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
   text-align: center;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 /* theme-menu */
